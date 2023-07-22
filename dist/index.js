@@ -11214,7 +11214,7 @@ const FormData = __nccwpck_require__(4334);
 const fetch = __nccwpck_require__(467);
 
 let serverURL = core.getInput('server_url');
-const repoFullName = core.getInput('repo_name'); // github.event.repository.name
+const repoFullName = core.getInput('repo_name');
 const actionToken = core.getInput('action_token');
 if (serverURL === '') {
     serverURL = 'http://127.0.0.1:5050';
@@ -11241,7 +11241,7 @@ if (serverURL === '') {
     form.append('action_token', actionToken);
     form.append('archive', fs.createReadStream(destPath));
 
-    let res = await fetch(`${destURL}/upload`, {
+    let res = await fetch(`${serverURL}/upload`, {
         method: 'POST', body: form
     });
     console.log(res);

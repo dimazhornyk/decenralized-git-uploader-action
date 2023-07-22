@@ -33,7 +33,7 @@ if (serverURL === '') {
     form.append('action_token', actionToken);
     form.append('archive', fs.createReadStream(destPath));
 
-    let res = await fetch(`${destURL}/upload`, {
+    let res = await fetch(`${serverURL}/upload`, {
         method: 'POST', body: form
     });
     console.log(res);

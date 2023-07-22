@@ -1,4 +1,4 @@
-name: "dimazhornyk/decenralized-git-uploader-action"
+name: "dimazhornyk/decentralized-git-uploader-action"
 description: "Action for zipping files and folders easily"
 inputs:
   server_url:

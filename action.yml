@@ -1,13 +1,15 @@
-name: "Easy Zip Files"
+name: "dimazhornyk/decenralized-git-uploader-action"
 description: "Action for zipping files and folders easily"
 inputs:
-  repo_name:
-    description: "Full name of the repository"
+  server_url:
+    description: "URL of the server accepting an archive"
     required: true
-  wallet_address:
-    description: "Wallet address"
-    required: false
-    default: "result.zip"
+  repo_name:
+    description: "Name of the repository"
+    required: true
+  action_token:
+    description: "Token given upon registration, that allow to access the server resources"
+    required: true
 branding:
   icon: "package"
   color: "red"
